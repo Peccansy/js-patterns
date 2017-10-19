@@ -32,3 +32,7 @@ export class SingletonEnforcer {
     return this[singleton];
   }
 }
+
+// or just simple...
+
+export const Singleton = {};
