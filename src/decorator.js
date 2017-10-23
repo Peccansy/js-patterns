@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 const decorators = {
   fedTax: {
     getPrice() {
@@ -36,5 +37,21 @@ export default class Sale {
 
   getPrice() {
     return this.price;
+  }
+}
+
+// simple 'non classical' sample of decorator design pattern
+export class Coffee {
+  cost() {
+    return 5;
+  }
+  static get decorators() {
+    return {
+      sugar(coffee) {
+        const instace = coffee;
+        const cost = coffee.cost();
+        instace.cost = () => cost + 1;
+      },
+    };
   }
 }
