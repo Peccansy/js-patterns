@@ -1,4 +1,4 @@
-/* eslint-disable no-alert, no-console */
+/* eslint-disable no-console */
 // These factories allow you to register new subclasses and create them
 export default {
   registered: new Map(),
